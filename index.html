@@ -5,187 +5,299 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Muhammed Ameen Sheikh</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-* { margin:0; padding:0; box-sizing:border-box; }
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background:#ffffff;
+body{
+    font-family:'Poppins',sans-serif;
+    transition:0.4s;
+}
+
+/* LIGHT MODE */
+body.light{
+    background:#f8f6f0;
     color:#111;
 }
 
-/* HERO */
-.hero {
+/* DARK MODE */
+body.dark{
+    background:#0f172a;
+    color:#fff;
+}
+
+/* NAV */
+nav{
+    position:sticky;
+    top:0;
+    padding:15px 50px;
     display:flex;
-    justify-content:center;
+    justify-content:space-between;
+    backdrop-filter:blur(10px);
+    z-index:100;
+}
+body.light nav{background:rgba(255,255,255,0.7);}
+body.dark nav{background:rgba(15,23,42,0.8);}
+
+nav a{
+    text-decoration:none;
+    margin-left:20px;
+    font-weight:500;
+}
+body.light nav a{color:#111;}
+body.dark nav a{color:#fff;}
+
+nav a:hover{color:#c5a032;}
+
+/* TOGGLE */
+.toggle{
+    cursor:pointer;
+    padding:5px 12px;
+    border-radius:20px;
+    border:1px solid #c5a032;
+}
+
+/* HERO */
+.hero{
+    display:flex;
     align-items:center;
-    gap:50px;
-    padding:80px 20px;
+    justify-content:center;
+    gap:60px;
+    padding:100px 20px;
     flex-wrap:wrap;
 }
 
-.hero img {
-    width:180px;
-    height:180px;
+.hero img{
+    width:190px;height:190px;
     border-radius:50%;
     object-fit:cover;
-    border:5px solid gold;
+    object-position:top;
+    border:4px solid #c5a032;
+    box-shadow:0 0 25px rgba(197,160,50,0.5);
 }
 
-.hero-text h1 {
-    font-size:38px;
-}
+.hero-text h1{font-size:42px;}
+.hero-text span{color:#c5a032;}
 
-.hero-text span {
-    color:gold;
-}
-
-.hero-text p {
+.hero-text p{
     margin-top:10px;
     color:#555;
 }
 
-.btn {
+/* BUTTON BASE */
+.btn{
     display:inline-block;
     margin-top:15px;
+    margin-right:10px;
+    margin-bottom:10px;
     padding:12px 25px;
-    background:gold;
-    color:#000;
-    border-radius:25px;
+    border-radius:30px;
     text-decoration:none;
-}
-
-/* SECTION */
-section {
-    max-width:1000px;
-    margin:auto;
-    padding:60px 20px;
-}
-
-h2 {
-    margin-bottom:25px;
-    font-size:28px;
-}
-
-/* CARD */
-.card {
-    background:#f5f5f5;
-    padding:20px;
-    border-radius:12px;
-    margin-bottom:20px;
+    font-size:14px;
     transition:0.3s;
 }
 
-.card:hover {
-    transform:translateY(-6px);
+/* BUTTON VARIANTS */
+.btn-primary{
+    background:#c5a032;
+    color:#000;
+}
+.btn-primary:hover{
+    background:#a88325;
+    transform:scale(1.05);
+}
+
+.btn-outline{
+    border:2px solid #c5a032;
+    color:#c5a032;
+}
+.btn-outline:hover{
+    background:#c5a032;
+    color:#000;
+    transform:scale(1.05);
+}
+
+/* SOCIAL SPECIAL */
+.btn-social{
+    border:2px solid #c5a032;
+    color:#c5a032;
+}
+.btn-social:hover{
+    background:#c5a032;
+    color:#000;
+    transform:translateY(-3px) scale(1.05);
+}
+
+/* SECTION */
+section{
+    max-width:1100px;
+    margin:auto;
+    padding:80px 20px;
+}
+
+/* CARD */
+.card{
+    padding:25px;
+    border-radius:15px;
+    margin-bottom:20px;
+    transition:0.3s;
+}
+body.light .card{background:#fff;box-shadow:0 10px 25px rgba(0,0,0,0.1);}
+body.dark .card{background:#1e293b;}
+
+.card:hover{transform:translateY(-6px);}
+
+/* STATS */
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+    text-align:center;
+}
+.stat{
+    padding:30px;
+    border-radius:15px;
+}
+body.light .stat{background:#111;color:#fff;}
+body.dark .stat{background:#fff;color:#000;}
+
+.stat h2{color:#c5a032;}
+
+/* PROJECTS */
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
 }
 
 /* FOOTER */
-footer {
+footer{
     text-align:center;
-    padding:25px;
-    background:#111;
-    color:#fff;
+    padding:20px;
+}
+body.light footer{background:#111;color:#fff;}
+body.dark footer{background:#fff;color:#000;}
+
+/* ANIMATION */
+.hidden{
+    opacity:0;
+    transform:translateY(40px);
+    transition:all 0.7s;
+}
+.show{
+    opacity:1;
+    transform:translateY(0);
 }
 </style>
 </head>
 
-<body>
+<body class="light">
+
+<!-- NAV -->
+<nav>
+<div><b>Ameen</b></div>
+<div>
+<a href="#about">About</a>
+<a href="#experience">Experience</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+<span class="toggle" onclick="toggleMode()">🌙</span>
+</div>
+</nav>
 
 <!-- HERO -->
 <div class="hero">
-    <img src="https://raw.githubusercontent.com/muhammedameensheikh-sketch/portfolio/main/Passport%20size.jpg" alt="Profile Photo">
+<img src="https://raw.githubusercontent.com/muhammedameensheikh-sketch/portfolio/main/Passport%20size.jpg">
 
-    <div class="hero-text">
-        <h1><span>Muhammed Ameen Sheikh</span></h1>
-        <p>Technical Support & Field Operations Specialist</p>
-        <a class="btn" href="https://www.linkedin.com/in/muhammed-ameen-sheikh-371820215" target="_blank">View LinkedIn</a>
-    </div>
+<div class="hero-text">
+<h1>Hi, I'm <span>Muhammed Ameen Sheikh</span></h1>
+<p id="typing"></p>
+
+<a class="btn btn-primary" href="https://www.linkedin.com/in/muhammed-ameen-sheikh-371820215" target="_blank">LinkedIn</a>
+
+<a class="btn btn-outline" href="https://raw.githubusercontent.com/muhammedameensheikh-sketch/portfolio/main/resume.pdf" download>Resume</a>
+
+<a class="btn btn-social" href="https://www.youtube.com/@CookWithSheikh1" target="_blank">YouTube</a>
+
+<a class="btn btn-social" href="https://instagram.com/cook_with_sheikh?igsh=Zmc2b3EyMWJnYXJ6" target="_blank">Instagram</a>
+</div>
 </div>
 
-<!-- SUMMARY -->
-<section>
-<h2>Professional Summary</h2>
+<!-- STATS -->
+<section class="stats hidden">
+<div class="stat"><h2>3+</h2><p>Years Experience</p></div>
+<div class="stat"><h2>500+</h2><p>Tickets Resolved</p></div>
+<div class="stat"><h2>100%</h2><p>SLA Focus</p></div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="hidden">
+<h2>About Me</h2>
 <div class="card">
-Technical Support & Operations Professional with 3+ years of experience supporting Lenovo India. Skilled in troubleshooting, escalation handling, SLA management, backend operations, and field engineer coordination.
+Technical Support expert with Lenovo experience, handling escalations, SLA compliance, and backend operations efficiently.
 </div>
 </section>
 
 <!-- EXPERIENCE -->
-<section>
-<h2>Professional Experience</h2>
-
-<div class="card">
-<b>Field Support Executive – JoulesToWatts (Lenovo India Client)</b><br>
-June 2025 – Present<br><br>
-• Leading field support operations for Lenovo India<br>
-• Handling escalations and ensuring timely case closure<br>
-• Coordinating with vendors and backend teams<br>
-• Assisting engineers with on-site troubleshooting<br>
-• Ensuring SLA compliance
-</div>
-
-<div class="card">
-<b>Technical Support Executive – Concentrix (Lenovo Process)</b><br>
-February 2023 – June 2025<br><br>
-• Provided technical support for Lenovo consumer customers<br>
-• Troubleshot hardware and software issues<br>
-• Promoted to Backend Field Support role due to performance<br>
-• Managed escalations and unresolved cases<br>
-• Worked extensively on MS Dynamics 365
-</div>
-
-<div class="card">
-<b>Customer Support Agent – Concentrix (Razorpay Process)</b><br>
-November 2022 – January 2023<br><br>
-• Handled payment-related queries and KYC verification<br>
-• Guided customers through onboarding and documentation<br>
-• Explained settlement flow and platform usage
-</div>
-
+<section id="experience" class="hidden">
+<h2>Experience</h2>
+<div class="card">Field Support Executive – JoulesToWatts (June 2025 – Present)</div>
+<div class="card">Technical Support Executive – Concentrix (Feb 2023 – June 2025)</div>
+<div class="card">Customer Support – Razorpay (Nov 2022 – Jan 2023)</div>
 </section>
 
-<!-- SKILLS -->
-<section>
-<h2>Core Skills</h2>
-<div class="card">
-Technical Support & Troubleshooting • Customer Support • Field Operations • SLA Management • CRM Tools • MS Dynamics 365 • Escalation Handling • Problem Solving
-</div>
-</section>
-
-<!-- EDUCATION -->
-<section>
-<h2>Education</h2>
-<div class="card">
-BCA – Shantiniketan College of Science & Management<br>
-PUC (Commerce) – BGS PU College<br>
-SSLC – New Millennium High School
-</div>
-</section>
-
-<!-- LANGUAGES -->
-<section>
-<h2>Languages</h2>
-<div class="card">
-English • Kannada • Hindi • Urdu
+<!-- PROJECTS -->
+<section id="projects" class="hidden">
+<h2>Projects</h2>
+<div class="projects">
+<div class="card">Portfolio Website (This site)</div>
+<div class="card">Technical Support Case Handling Experience</div>
+<div class="card">Customer Escalation Management</div>
 </div>
 </section>
 
 <!-- CONTACT -->
-<section>
+<section id="contact" class="hidden">
 <h2>Contact</h2>
 <div class="card">
 📧 muhammedameensheikh@gmail.com<br>
-📱 7795149021<br>
-🌐 <a href="https://www.linkedin.com/in/muhammed-ameen-sheikh-371820215" target="_blank">LinkedIn Profile</a>
+📱 7795149021
 </div>
 </section>
 
 <footer>
 © 2026 Muhammed Ameen Sheikh
 </footer>
+
+<script>
+// typing
+const text="Technical Support & Field Operations Specialist | Lenovo Experience";
+let i=0;
+function type(){
+if(i<text.length){
+document.getElementById("typing").innerHTML+=text.charAt(i);
+i++;
+setTimeout(type,40);
+}}
+type();
+
+// dark mode toggle
+function toggleMode(){
+document.body.classList.toggle("dark");
+document.body.classList.toggle("light");
+}
+
+// scroll animation
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}});
+});
+document.querySelectorAll(".hidden").forEach(el=>observer.observe(el));
+</script>
 
 </body>
 </html>
