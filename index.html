@@ -3,130 +3,136 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Muhammed Ameen Sheikh | Portfolio</title>
+<title>Muhammed Ameen Sheikh</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
+* { margin:0; padding:0; box-sizing:border-box; }
+
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0f172a;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #020617, #0f172a);
     color: #fff;
 }
 
-header {
-    text-align: center;
-    padding: 60px 20px;
+/* HERO */
+.hero {
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
 }
 
-header h1 {
-    font-size: 40px;
+.hero h1 {
+    font-size:50px;
 }
 
-header p {
-    color: #94a3b8;
+.hero span {
+    color:#38bdf8;
 }
 
+.hero p {
+    margin-top:10px;
+    color:#94a3b8;
+}
+
+.btn {
+    margin-top:20px;
+    padding:12px 25px;
+    background:#38bdf8;
+    color:#000;
+    border-radius:30px;
+    text-decoration:none;
+}
+
+/* SECTIONS */
 section {
-    padding: 40px 20px;
-    max-width: 900px;
-    margin: auto;
+    padding:80px 20px;
+    max-width:1000px;
+    margin:auto;
 }
 
 h2 {
-    border-bottom: 2px solid #38bdf8;
-    display: inline-block;
-    margin-bottom: 20px;
+    margin-bottom:30px;
+    font-size:30px;
 }
 
+/* CARDS */
 .card {
-    background: #1e293b;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
+    background:rgba(255,255,255,0.05);
+    padding:20px;
+    border-radius:15px;
+    margin-bottom:20px;
+    transition:0.3s;
 }
 
-a {
-    color: #38bdf8;
-    text-decoration: none;
+.card:hover {
+    transform:translateY(-8px);
 }
 
+/* GRID */
+.grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+    gap:20px;
+}
+
+/* FOOTER */
 footer {
-    text-align: center;
-    padding: 20px;
-    color: #94a3b8;
+    text-align:center;
+    padding:30px;
+    color:#94a3b8;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-    <h1>Muhammed Ameen Sheikh</h1>
+<div class="hero">
+    <h1>Hi, I'm <span>Ameen</span></h1>
     <p>Technical Support & Field Operations Specialist</p>
-</header>
+    <a class="btn" href="https://www.linkedin.com/in/muhammed-ameen-sheikh-371820215" target="_blank">LinkedIn</a>
+</div>
 
 <section>
-    <h2>About Me</h2>
-    <div class="card">
-        <p>
-        Technical Support & Operations professional with 3+ years of experience supporting Lenovo India.
-        Skilled in troubleshooting, escalation handling, SLA management, and field support coordination.
-        </p>
-    </div>
+<h2>About Me</h2>
+<div class="card">
+3+ years experience supporting Lenovo India. Skilled in troubleshooting, SLA management, escalation handling, and field coordination.
+</div>
 </section>
 
 <section>
-    <h2>Skills</h2>
-    <div class="card">
-        <p>
-        Technical Support • Troubleshooting • Customer Support • Field Operations • SLA Management • CRM Tools • MS Dynamics 365
-        </p>
-    </div>
+<h2>Skills</h2>
+<div class="grid">
+<div class="card">Technical Support</div>
+<div class="card">Troubleshooting</div>
+<div class="card">SLA Management</div>
+<div class="card">MS Dynamics 365</div>
+<div class="card">CRM Tools</div>
+<div class="card">Customer Support</div>
+</div>
 </section>
 
 <section>
-    <h2>Experience</h2>
+<h2>Experience</h2>
 
-    <div class="card">
-        <h3>Field Support Executive – JoulesToWatts</h3>
-        <p>June 2025 – Present</p>
-        <p>Handling escalations, vendor coordination, SLA compliance, and supporting Lenovo field engineers.</p>
-    </div>
+<div class="card">
+<h3>Field Support Executive – JoulesToWatts</h3>
+<p>2025 – Present</p>
+</div>
 
-    <div class="card">
-        <h3>Technical Support Executive – Concentrix</h3>
-        <p>Feb 2023 – June 2025</p>
-        <p>Provided Lenovo customer support, handled backend escalations, and worked on MS Dynamics 365.</p>
-    </div>
+<div class="card">
+<h3>Technical Support Executive – Concentrix</h3>
+<p>2023 – 2025</p>
+</div>
 
-    <div class="card">
-        <h3>Customer Support Agent – Razorpay</h3>
-        <p>Nov 2022 – Jan 2023</p>
-        <p>Handled KYC, payment issues, and customer onboarding support.</p>
-    </div>
-
-</section>
-
-<section>
-    <h2>Education</h2>
-    <div class="card">
-        <p>BCA – Shantiniketan College</p>
-        <p>PUC (Commerce) – BGS PU College</p>
-        <p>SSLC – New Millennium High School</p>
-    </div>
-</section>
-
-<section>
-    <h2>Contact</h2>
-    <div class="card">
-        <p>Email: muhammedameensheikh@gmail.com</p>
-        <p>Phone: 7795149021</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/muhammed-ameen-sheikh-371820215" target="_blank">View Profile</a></p>
-    </div>
 </section>
 
 <footer>
-    <p>© 2026 Muhammed Ameen Sheikh</p>
+<p>© 2026 Muhammed Ameen Sheikh</p>
 </footer>
 
 </body>
