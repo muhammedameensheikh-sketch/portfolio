@@ -12,49 +12,49 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: #ffffff;
-    color: #111;
+    background:#ffffff;
+    color:#111;
 }
 
 /* HERO */
 .hero {
-    height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
-    flex-direction:column;
-    text-align:center;
-    animation: fadeIn 1.5s ease-in;
+    gap:50px;
+    padding:80px 20px;
+    flex-wrap:wrap;
+    animation: fadeIn 1.2s ease-in;
 }
 
 .hero img {
-    width:150px;
-    height:150px;
+    width:180px;
+    height:180px;
     border-radius:50%;
     object-fit:cover;
-    border:4px solid gold;
-    margin-bottom:20px;
+    border:5px solid gold;
 }
 
-.hero h1 {
-    font-size:45px;
+.hero-text h1 {
+    font-size:42px;
 }
 
-.hero span {
+.hero-text span {
     color:gold;
 }
 
-.hero p {
+.hero-text p {
     margin-top:10px;
     color:#555;
 }
 
 .btn {
-    margin-top:20px;
+    display:inline-block;
+    margin-top:15px;
     padding:12px 25px;
     background:gold;
     color:#000;
-    border-radius:30px;
+    border-radius:25px;
     text-decoration:none;
     transition:0.3s;
 }
@@ -65,28 +65,28 @@ body {
 
 /* SECTION */
 section {
-    padding:80px 20px;
     max-width:1000px;
     margin:auto;
+    padding:60px 20px;
 }
 
 h2 {
-    margin-bottom:30px;
+    margin-bottom:25px;
     font-size:30px;
     color:#000;
 }
 
 /* CARDS */
 .card {
-    background:#f9f9f9;
+    background:#f5f5f5;
     padding:20px;
-    border-radius:15px;
+    border-radius:12px;
     margin-bottom:20px;
     transition:0.3s;
 }
 
 .card:hover {
-    transform:translateY(-10px);
+    transform:translateY(-8px);
 }
 
 /* GRID */
@@ -98,14 +98,14 @@ h2 {
 
 /* ANIMATION */
 @keyframes fadeIn {
-    from { opacity:0; transform:translateY(20px); }
-    to { opacity:1; transform:translateY(0); }
+    from {opacity:0; transform:translateY(20px);}
+    to {opacity:1; transform:translateY(0);}
 }
 
 /* FOOTER */
 footer {
     text-align:center;
-    padding:30px;
+    padding:25px;
     background:#111;
     color:#fff;
 }
@@ -114,52 +114,72 @@ footer {
 
 <body>
 
+<!-- HERO -->
 <div class="hero">
-    <!-- ADD YOUR PHOTO HERE -->
-    <img src="photo.jpg" alt="Profile Photo">
+    <img src="https://raw.githubusercontent.com/muhammedameensheikh-sketch/portfolio/main/Passport%20size.jpg" alt="Profile Photo">
 
-    <h1>Hi, I'm <span>Ameen</span></h1>
-    <p>Technical Support & Field Operations Specialist</p>
-
-    <a class="btn" href="https://www.linkedin.com/in/muhammed-ameen-sheikh-371820215" target="_blank">LinkedIn</a>
+    <div class="hero-text">
+        <h1>Hi, I'm <span>Ameen</span></h1>
+        <p>Technical Support & Field Operations Specialist</p>
+        <a class="btn" href="https://www.linkedin.com/in/muhammed-ameen-sheikh-371820215" target="_blank">LinkedIn</a>
+    </div>
 </div>
 
+<!-- ABOUT -->
 <section>
 <h2>About Me</h2>
 <div class="card">
-3+ years experience supporting Lenovo India. Skilled in troubleshooting, SLA management, escalation handling, and field coordination.
+Technical Support & Operations professional with 3+ years of experience supporting Lenovo India. Skilled in troubleshooting, escalation handling, SLA management, and field support coordination.
 </div>
 </section>
 
+<!-- SKILLS -->
 <section>
 <h2>Skills</h2>
 <div class="grid">
 <div class="card">Technical Support</div>
 <div class="card">Troubleshooting</div>
 <div class="card">SLA Management</div>
+<div class="card">CRM & Ticketing Tools</div>
 <div class="card">MS Dynamics 365</div>
-<div class="card">CRM Tools</div>
 <div class="card">Customer Support</div>
 </div>
 </section>
 
+<!-- EXPERIENCE -->
 <section>
 <h2>Experience</h2>
 
 <div class="card">
-<h3>Field Support Executive – JoulesToWatts</h3>
-<p>2025 – Present</p>
+<b>Field Support Executive – JoulesToWatts</b><br>
+Managing Lenovo field operations, handling escalations, coordinating vendors, and ensuring SLA compliance.
 </div>
 
 <div class="card">
-<h3>Technical Support Executive – Concentrix</h3>
-<p>2023 – 2025</p>
+<b>Technical Support Executive – Concentrix</b><br>
+Provided technical support for Lenovo customers, handled backend escalations, and worked on MS Dynamics 365.
+</div>
+
+<div class="card">
+<b>Customer Support Agent – Razorpay</b><br>
+Handled KYC verification, payment issues, and customer onboarding support.
 </div>
 
 </section>
 
+<!-- CONTACT -->
+<section>
+<h2>Contact</h2>
+<div class="card">
+📧 muhammedameensheikh@gmail.com<br>
+📱 7795149021<br>
+🌐 <a href="https://www.linkedin.com/in/muhammed-ameen-sheikh-371820215" target="_blank">LinkedIn Profile</a>
+</div>
+</section>
+
+<!-- FOOTER -->
 <footer>
-<p>© 2026 Muhammed Ameen Sheikh</p>
+© 2026 Muhammed Ameen Sheikh
 </footer>
 
 </body>
