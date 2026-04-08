@@ -1,201 +1,213 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-html{
-    scroll-behavior:smooth;
-}
+<title>Muhammed Ameen Sheikh | Technical Support & Field Operations</title>
 
-body{
-    font-family:'Poppins',sans-serif;
-    transition:0.4s;
-}
+<meta name="description" content="Muhammed Ameen Sheikh - Technical Support & Field Operations Specialist with 3+ years experience in Lenovo India.">
+<meta name="keywords" content="Technical Support, Lenovo, Field Operations, SLA Management">
+<meta name="author" content="Muhammed Ameen Sheikh">
 
-/* LIGHT MODE */
-body.light{
-    background:#f8f6f0;
-    color:#111;
-}
+<link rel="icon" href="https://raw.githubusercontent.com/muhammedameensheikh-sketch/portfolio/main/Passport%20size.jpg">
 
-/* DARK MODE */
-body.dark{
-    background:#0f172a;
-    color:#fff;
-}
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-/* NAVBAR */
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+
+body{font-family:'Poppins',sans-serif;transition:0.4s;}
+body.light{background:#f8f6f0;color:#111;}
+body.dark{background:#0f172a;color:#fff;}
+
 nav{
-    position:sticky;
-    top:0;
-    padding:15px 50px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    backdrop-filter:blur(10px);
-    z-index:100;
-    overflow:hidden; /* prevents logo overflow */
+position:sticky;top:0;
+padding:15px 50px;
+display:flex;justify-content:space-between;
+backdrop-filter:blur(10px);
+z-index:100;
 }
+body.light nav{background:rgba(255,255,255,0.7);}
+body.dark nav{background:rgba(15,23,42,0.8);}
 
-body.light nav{
-    background:rgba(255,255,255,0.7);
-}
+nav a{margin-left:20px;text-decoration:none;}
+nav a:hover{color:#c5a032;}
 
-body.dark nav{
-    background:rgba(15,23,42,0.8);
-}
+.toggle{cursor:pointer;border:1px solid #c5a032;padding:5px 10px;border-radius:20px;}
 
-/* LOGO FIX */
-.logo{
-    display:flex;
-    align-items:center;
-}
-
-.logo img{
-    height:40px;
-    width:auto;
-    max-width:120px;
-    object-fit:contain;
-    transition:0.3s;
-}
-
-.logo img:hover{
-    transform:scale(1.08);
-    filter:drop-shadow(0 0 6px rgba(197,160,50,0.6));
-}
-
-/* NAV LINKS */
-nav a{
-    margin-left:20px;
-    text-decoration:none;
-    font-weight:500;
-}
-
-nav a:hover{
-    color:#c5a032;
-}
-
-/* TOGGLE BUTTON */
-.toggle{
-    cursor:pointer;
-    border:1px solid #c5a032;
-    padding:5px 10px;
-    border-radius:20px;
-}
-
-/* HERO SECTION */
 .hero{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:60px;
-    padding:100px 20px;
-    flex-wrap:wrap;
+display:flex;align-items:center;justify-content:center;
+gap:60px;padding:100px 20px;flex-wrap:wrap;
 }
-
 .hero img{
-    width:190px;
-    height:190px;
-    border-radius:50%;
-    object-fit:cover;
-    object-position:top;
-    border:4px solid #c5a032;
-    box-shadow:0 0 25px rgba(197,160,50,0.5);
+width:190px;height:190px;border-radius:50%;
+object-fit:cover;object-position:top;
+border:4px solid #c5a032;
+box-shadow:0 0 25px rgba(197,160,50,0.5);
 }
+.hero-text h1{font-size:40px;}
+.hero-text span{color:#c5a032;}
 
-.hero-text h1{
-    font-size:40px;
-}
-
-.hero-text span{
-    color:#c5a032;
-}
-
-.hero-text p{
-    margin-top:10px;
-    color:#555;
-}
-
-/* BUTTONS */
 .btn{
-    display:inline-block;
-    margin:10px 10px 0 0;
-    padding:12px 25px;
-    border-radius:30px;
-    text-decoration:none;
-    transition:0.3s;
+display:inline-block;margin:10px 10px 0 0;
+padding:12px 25px;border-radius:30px;text-decoration:none;
+transition:0.3s;
 }
+.btn-primary{background:#c5a032;color:#000;}
+.btn-outline{border:2px solid #c5a032;color:#c5a032;}
+.btn-outline:hover{background:#c5a032;color:#000;transform:scale(1.05);}
 
-.btn-primary{
-    background:#c5a032;
-    color:#000;
-}
+section{max-width:1100px;margin:auto;padding:70px 20px;}
+h2{margin-bottom:20px;}
 
-.btn-primary:hover{
-    background:#a88325;
-    transform:scale(1.05);
-}
-
-.btn-outline{
-    border:2px solid #c5a032;
-    color:#c5a032;
-}
-
-.btn-outline:hover{
-    background:#c5a032;
-    color:#000;
-    transform:scale(1.05);
-}
-
-/* SECTIONS */
-section{
-    max-width:1100px;
-    margin:auto;
-    padding:70px 20px;
-}
-
-h2{
-    margin-bottom:20px;
-}
-
-/* CARDS */
 .card{
-    padding:25px;
-    border-radius:15px;
-    margin-bottom:25px;
-    line-height:1.7;
-    font-size:15px;
-    transition:0.3s;
+padding:25px;
+border-radius:15px;
+margin-bottom:25px;
+line-height:1.7;
+font-size:15px;
 }
+body.light .card{background:#fff;box-shadow:0 10px 25px rgba(0,0,0,0.1);}
+body.dark .card{background:#1e293b;}
 
-body.light .card{
-    background:#fff;
-    box-shadow:0 10px 25px rgba(0,0,0,0.1);
-}
+.card ul{margin-top:10px;padding-left:20px;}
+.card li{margin-bottom:8px;}
 
-body.dark .card{
-    background:#1e293b;
-}
+footer{text-align:center;padding:20px;background:#111;color:#fff;}
+</style>
+</head>
 
-.card:hover{
-    transform:translateY(-6px);
-}
+<body class="light">
 
-/* LISTS */
-.card ul{
-    margin-top:10px;
-    padding-left:20px;
-}
+<nav>
+<div class="logo">
+<img src="https://raw.githubusercontent.com/muhammedameensheikh-sketch/portfolio/main/logo.png" alt="MAS Logo">
+</div>
+<div>
+<a href="#about">About</a>
+<a href="#experience">Experience</a>
+<a href="#contact">Contact</a>
+<span class="toggle" onclick="toggleMode()">🌙</span>
+</div>
+</nav>
 
-.card li{
-    margin-bottom:8px;
-}
+<div class="hero">
+<img src="https://raw.githubusercontent.com/muhammedameensheikh-sketch/portfolio/main/Passport%20size.jpg">
 
-/* FOOTER */
-footer{
-    text-align:center;
-    padding:20px;
-    background:#111;
-    color:#fff;
+<div class="hero-text">
+<h1>Hi, I'm <span>Muhammed Ameen Sheikh</span></h1>
+<p>Technical Support & Field Operations Specialist</p>
+
+<a class="btn btn-outline" href="https://www.linkedin.com/in/muhammed-ameen-sheikh-371820215" target="_blank">LinkedIn</a>
+
+<a class="btn btn-outline" href="https://raw.githubusercontent.com/muhammedameensheikh-sketch/portfolio/main/resume.pdf" download>Download Resume</a>
+
+<a class="btn btn-outline" href="https://www.youtube.com/@CookWithSheikh1" target="_blank">YouTube</a>
+
+<a class="btn btn-outline" href="https://instagram.com/cook_with_sheikh?igsh=Zmc2b3EyMWJnYXJ6" target="_blank">Instagram</a>
+</div>
+</div>
+
+<section id="about">
+<h2>About</h2>
+<div class="card">
+Operations professional with 3+ years of experience supporting Lenovo India across Technical and Field Support operations. Currently part of the Lead Operations team, responsible for overseeing field service activities, coordinating with engineers and partners, ensuring SLA adherence, and managing escalations to deliver timely customer resolution.
+
+<br><br>
+
+Experienced in end-to-end service operations including case management, dispatch coordination, follow-ups, root cause tracking, and customer communication. Skilled at working in fast-paced environments while maintaining service quality and operational efficiency.
+
+<br><br>
+
+Known for strong coordination, clear communication, and ownership-driven problem solving across technical and field operations.
+
+<br><br>
+
+<b>Core Areas:</b><br>
+Field Support Operations | Technical Support | SLA Management | Escalation Handling | Engineer Coordination | Customer Experience | Operations Support
+</div>
+</section>
+
+<section id="experience">
+<h2>Experience</h2>
+
+<div class="card">
+<b>Lead Operations – Field Support (Client: Lenovo)</b><br>
+JoulestoWatts Business Solutions Pvt Ltd<br>
+Jun 2025 – Present
+
+<ul>
+<li>Supporting Lenovo India Field Support Operations as part of the Lead Operations team</li>
+<li>Coordinating with field engineers, service partners, and internal teams</li>
+<li>Monitoring service tickets and ensuring SLA adherence</li>
+<li>Managing escalations and providing timely operational updates</li>
+<li>Ensuring smooth execution of field services and customer satisfaction</li>
+</ul>
+</div>
+
+<div class="card">
+<b>Technical and Field Support Representative</b><br>
+Lenovo<br>
+Nov 2022 – Present
+
+<ul>
+<li>Provided technical support for Lenovo consumer devices</li>
+<li>Coordinated field engineer dispatch, logistics, and follow-ups</li>
+<li>Handled customer escalations within SLA timelines</li>
+<li>Supported remote troubleshooting and field operations</li>
+<li>Maintained high customer satisfaction through communication</li>
+</ul>
+</div>
+
+<div class="card">
+<b>Technical Support Executive</b><br>
+Concentrix Service India Pvt Ltd<br>
+Nov 2022 – Jun 2025
+
+<ul>
+<li>Delivered technical support services for Lenovo consumer products</li>
+<li>Diagnosed hardware and software issues and guided customers through resolution</li>
+<li>Worked closely with Lenovo internal teams to ensure faster case closure</li>
+<li>Handled customer queries, troubleshooting, and service requests efficiently</li>
+<li>Maintained proper documentation and followed quality & compliance standards</li>
+</ul>
+</div>
+
+<div class="card">
+<b>Customer Support – Razorpay</b><br>
+Nov 2022 – Jan 2023
+
+<ul>
+<li>Handled customer queries related to payments, settlements, and account issues</li>
+<li>Assisted users with onboarding and KYC verification process</li>
+<li>Provided guidance on Razorpay dashboard and transaction flow</li>
+<li>Resolved customer issues with a focus on accuracy and quick turnaround time</li>
+<li>Maintained high customer satisfaction through effective communication</li>
+</ul>
+</div>
+
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<div class="card">
+📧 muhammedameensheikh@gmail.com<br>
+📱 7795149021
+</div>
+</section>
+
+<footer>
+© 2026 Muhammed Ameen Sheikh
+</footer>
+
+<script>
+function toggleMode(){
+document.body.classList.toggle("dark");
+document.body.classList.toggle("light");
 }
+</script>
+
+</body>
+</html>
